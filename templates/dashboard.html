@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hookyy Report</title>
+<style>
+  :root {
+    --bg: #f7f7f8; --panel: #ffffff; --text: #1d1d22; --muted: #6b6b76; --border: #e3e3e8;
+    --error: #d93636; --warning: #c98a00; --info: #2f6fdb; --ok: #1f9d55; --accent: #6b4de6;
+    --chip: #f0f0f3; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121216; --panel: #1b1b21; --text: #ececf1; --muted: #9a9aa6; --border: #2d2d36;
+      --error: #ff6b6b; --warning: #f2b840; --info: #6ea2ff; --ok: #4cc38a; --accent: #9d87ff; --chip: #26262e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121216; --panel: #1b1b21; --text: #ececf1; --muted: #9a9aa6; --border: #2d2d36;
+    --error: #ff6b6b; --warning: #f2b840; --info: #6ea2ff; --ok: #4cc38a; --accent: #9d87ff; --chip: #26262e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 16px; margin: 32px 0 12px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  button.theme { background: var(--chip); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .card .value { font-size: 26px; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .card.error .value { color: var(--error); } .card.warning .value { color: var(--warning); } .card.info .value { color: var(--info); }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .toolbar input[type=search] { flex: 1 1 220px; min-width: 0; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); }
+  .chip { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 999px; padding: 5px 12px; cursor: pointer; font-size: 13px; }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .issue { background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--muted); border-radius: 10px; margin-bottom: 10px; }
+  .issue.error { border-left-color: var(--error); } .issue.warning { border-left-color: var(--warning); } .issue.info { border-left-color: var(--info); }
+  .issue summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; grid-template-columns: auto auto 1fr; gap: 6px 10px; align-items: baseline; }
+  .issue summary::-webkit-details-marker { display: none; }
+  .sev { font-size: 11px; font-weight: 700; text-transform: uppercase; }
+  .sev.error { color: var(--error); } .sev.warning { color: var(--warning); } .sev.info { color: var(--info); }
+  .code { font-family: var(--mono); font-size: 12px; background: var(--chip); padding: 1px 6px; border-radius: 4px; }
+  .hook { font-family: var(--mono); font-size: 13px; overflow-wrap: anywhere; }
+  .msg { grid-column: 1 / -1; }
+  .body { padding: 0 14px 14px; }
+  .rec { background: var(--chip); border-radius: 8px; padding: 10px 12px; }
+  .evidence { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
+  .empty { background: var(--panel); border: 1px dashed var(--border); border-radius: 10px; padding: 24px; text-align: center; color: var(--muted); }
+  .table-wrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { cursor: pointer; user-select: none; color: var(--muted); font-weight: 600; }
+  th[aria-sort="ascending"]::after { content: " ▲"; } th[aria-sort="descending"]::after { content: " ▼"; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.name { font-family: var(--mono); white-space: normal; overflow-wrap: anywhere; min-width: 240px; }
+  .bar { height: 6px; background: var(--chip); border-radius: 3px; min-width: 80px; }
+  .bar > span { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+  .ok { color: var(--ok); }
+  .what { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .card .value small { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .warn { margin-top: 16px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--warning); background: var(--panel); }
+  footer { margin-top: 32px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>🪝 Hookyy Report</h1>
+      <div class="meta" id="meta"></div>
+    </div>
+    <button class="theme" id="theme" type="button">Toggle theme</button>
+  </header>
+
+  <div id="warnings"></div>
+  <section class="cards" id="cards"></section>
+
+  <h2>Issues</h2>
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Filter by hook, message or scenario…" aria-label="Filter issues">
+    <span id="sevFilters"></span>
+    <span id="codeFilters"></span>
+  </div>
+  <div id="issues"></div>
+
+  <h2>Hooks</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr id="hookHead"></tr></thead>
+      <tbody id="hookBody"></tbody>
+    </table>
+  </div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const DATA = /*__HOOKYY_DATA__*/null;
+
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const ms = (v) => v >= 60000
+    ? Math.floor(v / 60000) + 'm ' + Math.round((v % 60000) / 1000) + 's'
+    : v >= 1000 ? (v / 1000).toFixed(2) + 's' : (Math.round(v * 10) / 10) + 'ms';
+  const s = DATA.summary;
+
+  $('meta').textContent = DATA.framework + ' · generated ' + new Date(DATA.generatedAt).toLocaleString();
+  $('warnings').innerHTML = (DATA.warnings || []).map((w) => '<div class="warn" role="note">⚠️ ' + esc(w) + '</div>').join('');
+  $('footer').textContent = 'Generated by hookyy v' + DATA.version + ' in ' + DATA.executionTime + 'ms';
+
+  // Share of test time spent in hooks (only when the report's durations support it).
+  const share = s.totalTestTime > 0 && s.totalHookTime > 0 && s.totalHookTime <= s.totalTestTime ? s.totalHookTime / s.totalTestTime : null;
+  const cards = [
+    ['Hook time', ms(s.totalHookTime || 0) + (share !== null ? ' <small>(' + Math.round(share * 100) + '%)</small>' : ''), ''],
+    ['Hooks', s.totalHooks, ''], ['Scenarios', s.totalScenarios, ''], ['Executions', s.totalExecutions, ''],
+    ['Errors', s.errorCount, 'error'], ['Warnings', s.warningCount, 'warning'], ['Info', s.infoCount, 'info'],
+  ];
+  $('cards').innerHTML = cards.map(([l, v, c]) => '<div class="card ' + c + '"><div class="label">' + l + '</div><div class="value">' + v + '</div></div>').join('');
+
+  // Theme toggle (remembered per viewer when storage is available)
+  const root = document.documentElement;
+  try { const t = localStorage.getItem('hookyy-theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  $('theme').onclick = () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('hookyy-theme', root.dataset.theme); } catch (e) {}
+  };
+
+  // ---- Issues with filters
+  const state = { q: '', sev: new Set(), code: new Set() };
+  function chips(el, values, set) {
+    el.innerHTML = values.map((v) => '<button class="chip" type="button" aria-pressed="false" data-v="' + esc(v) + '">' + esc(v) + '</button>').join(' ');
+    el.querySelectorAll('button').forEach((b) => b.onclick = () => {
+      const v = b.dataset.v;
+      set.has(v) ? set.delete(v) : set.add(v);
+      b.setAttribute('aria-pressed', set.has(v));
+      renderIssues();
+    });
+  }
+  chips($('sevFilters'), ['error', 'warning', 'info'].filter((v) => DATA.issues.some((i) => i.severity === v)), state.sev);
+  chips($('codeFilters'), Array.from(new Set(DATA.issues.map((i) => i.code))), state.code);
+  $('search').oninput = (e) => { state.q = e.target.value.toLowerCase(); renderIssues(); };
+
+  function evidenceText(e) {
+    if (e == null || typeof e !== 'object') return String(e);
+    const p = [];
+    if (e.scenario) p.push(e.scenario);
+    if (typeof e.duration === 'number') p.push(ms(e.duration));
+    if (Array.isArray(e.tags)) p.push('tags: ' + (e.tags.join(' ') || '(none)'));
+    if (e.expected) p.push('expected: ' + e.expected);
+    if (e.declared) p.push('declared at ' + e.declared);
+    if (e.error) p.push('error: ' + e.error);
+    if (typeof e.runs === 'number' && typeof e.total === 'number') p.push(e.runs + ' runs, ' + ms(e.total) + ' in total' + (e.share ? ' (' + Math.round(e.share * 100) + '% of test time)' : ''));
+    return p.length ? p.join(' · ') : JSON.stringify(e);
+  }
+
+  function renderIssues() {
+    const list = DATA.issues.filter((i) =>
+      (!state.sev.size || state.sev.has(i.severity)) &&
+      (!state.code.size || state.code.has(i.code)) &&
+      (!state.q || (i.hookName + ' ' + i.message + ' ' + i.evidence.map(evidenceText).join(' ')).toLowerCase().includes(state.q)));
+    if (!DATA.issues.length) { $('issues').innerHTML = '<div class="empty">' + (s.totalHooks === 0 && (DATA.warnings || []).length ? '⚠️ No hooks could be audited from this report (see the warning above).' : s.totalHooks === 0 ? 'No hooks found in this report, so there was nothing to audit.' : '✅ No hook issues found.') + '</div>'; return; }
+    if (!list.length) { $('issues').innerHTML = '<div class="empty">No issues match the current filters.</div>'; return; }
+    $('issues').innerHTML = list.map((i) =>
+      '<details class="issue ' + i.severity + '"><summary>' +
+        '<span class="sev ' + i.severity + '">' + i.severity + '</span><span class="code">' + i.code + '</span>' +
+        '<span class="hook">' + esc(i.hookName) + '</span><span class="msg">' + esc(i.message) + '</span></summary>' +
+        '<div class="body"><div class="rec">💡 ' + esc(i.recommendation) + '</div>' +
+        (i.evidence.length ? '<ul class="evidence">' + i.evidence.slice(0, 50).map((e) => '<li>' + esc(evidenceText(e)) + '</li>').join('') +
+          (i.evidence.length > 50 ? '<li>…and ' + (i.evidence.length - 50) + ' more</li>' : '') + '</ul>' : '') +
+      '</div></details>').join('');
+  }
+  renderIssues();
+
+  // ---- Sortable hooks table
+  const cols = [
+    ['name', 'Hook'], ['type', 'Type'], ['executions', 'Runs', true], ['medianDuration', 'Median', true],
+    ['maxDuration', 'Max', true], ['totalDuration', 'Total time', true], ['issues', 'Issues'],
+  ];
+  let sort = { key: 'totalDuration', dir: -1 };
+  const maxTotal = Math.max(1, ...DATA.hooks.map((h) => h.totalDuration));
+  $('hookHead').innerHTML = cols.map(([k, l]) => '<th data-k="' + k + '" scope="col">' + l + '</th>').join('');
+  $('hookHead').querySelectorAll('th').forEach((th) => th.onclick = () => {
+    const k = th.dataset.k;
+    sort = { key: k, dir: sort.key === k ? -sort.dir : (k === 'name' || k === 'type' ? 1 : -1) };
+    renderHooks();
+  });
+  function renderHooks() {
+    $('hookHead').querySelectorAll('th').forEach((th) => th.setAttribute('aria-sort', th.dataset.k === sort.key ? (sort.dir > 0 ? 'ascending' : 'descending') : 'none'));
+    const rows = DATA.hooks.slice().sort((a, b) => {
+      const x = sort.key === 'issues' ? a.issues.length : a[sort.key], y = sort.key === 'issues' ? b.issues.length : b[sort.key];
+      return (x > y ? 1 : x < y ? -1 : 0) * sort.dir;
+    });
+    $('hookBody').innerHTML = rows.map((h) =>
+      '<tr><td class="name" title="' + esc(h.hookTags ? 'tags: ' + h.hookTags : '') + '">' + esc(h.name) +
+        ((h.insights || []).length ? '<div class="what">' + esc(h.insights.join('; ')) + '</div>' : '') + '</td><td>' + h.type + '</td>' +
+      '<td class="num">' + h.executions + '</td><td class="num">' + ms(h.medianDuration || 0) + '</td><td class="num">' + ms(h.maxDuration) + '</td>' +
+      '<td class="num"><div style="display:flex;gap:8px;align-items:center;justify-content:flex-end">' + ms(h.totalDuration) +
+      '<div class="bar"><span style="width:' + (h.totalDuration / maxTotal * 100).toFixed(1) + '%"></span></div></div></td>' +
+      '<td>' + (h.issues.length ? h.issues.map((c) => '<span class="code">' + c + '</span>').join(' ') : '<span class="ok">ok</span>') + '</td></tr>').join('') ||
+      '<tr><td colspan="7" class="meta">No hooks found in the report.</td></tr>';
+  }
+  renderHooks();
+})();
+</script>
+</body>
+</html>

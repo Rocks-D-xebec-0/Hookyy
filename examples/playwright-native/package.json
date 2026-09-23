@@ -1,0 +1,13 @@
+{
+  "name": "hookyy-example-playwright-native",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "audit:hooks": "hookyy analyze hookyy-playwright.json --verbose",
+    "test:ci": "playwright test; hookyy analyze hookyy-playwright.json --fail-on error -f markdown -o hooks.md"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "hookyy": "file:../.."
+  }
+}

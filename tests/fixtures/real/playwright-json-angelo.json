@@ -1,0 +1,703 @@
+{
+ "config": {
+  "version": "1.46.0",
+  "projects": [
+   {
+    "name": "chromium"
+   },
+   {
+    "name": "firefox"
+   }
+  ]
+ },
+ "suites": [
+  {
+   "title": "accessibility\\axe.spec.ts",
+   "file": "accessibility/axe.spec.ts",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "Accessibility Scans",
+     "file": "accessibility/axe.spec.ts",
+     "line": 6,
+     "column": 15,
+     "specs": [
+      {
+       "title": "home page a11y",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "skipped",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": -1,
+           "status": "skipped",
+           "duration": 0,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:45.397Z"
+          }
+         ],
+         "status": "skipped"
+        }
+       ],
+       "id": "c298edd00b176cde2295-f6dce8272fad5f8cf927",
+       "file": "accessibility/axe.spec.ts",
+       "line": 9,
+       "column": 7
+      },
+      {
+       "title": "search page a11y",
+       "ok": true,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "skipped",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": -1,
+           "status": "skipped",
+           "duration": 0,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:45.398Z"
+          }
+         ],
+         "status": "skipped"
+        }
+       ],
+       "id": "c298edd00b176cde2295-2495d7fb87890b8e43b0",
+       "file": "accessibility/axe.spec.ts",
+       "line": 16,
+       "column": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "e2e\\productSearch.spec.ts",
+   "file": "e2e/productSearch.spec.ts",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "product search",
+     "file": "e2e/productSearch.spec.ts",
+     "line": 3,
+     "column": 6,
+     "specs": [
+      {
+       "title": "search for product",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 0,
+           "status": "failed",
+           "duration": 7,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:46.198Z"
+          },
+          {
+           "workerIndex": 1,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:46.862Z"
+          },
+          {
+           "workerIndex": 2,
+           "status": "failed",
+           "duration": 4,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:47.504Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "21b76a5ab0d9998a9a18-971d5434b65a3c57f634",
+       "file": "e2e/productSearch.spec.ts",
+       "line": 4,
+       "column": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "pages\\home.spec.ts",
+   "file": "pages/home.spec.ts",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "home page",
+     "file": "pages/home.spec.ts",
+     "line": 3,
+     "column": 6,
+     "specs": [
+      {
+       "title": "title is correct",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 3,
+           "status": "failed",
+           "duration": 4,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:48.143Z"
+          },
+          {
+           "workerIndex": 4,
+           "status": "failed",
+           "duration": 4,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:48.809Z"
+          },
+          {
+           "workerIndex": 5,
+           "status": "failed",
+           "duration": 5,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:49.436Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "42c2b1cbea06b5c999f1-f1d2cf877cda6f460ccf",
+       "file": "pages/home.spec.ts",
+       "line": 8,
+       "column": 7
+      },
+      {
+       "title": "product cards are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 6,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:50.080Z"
+          },
+          {
+           "workerIndex": 7,
+           "status": "failed",
+           "duration": 7,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:50.810Z"
+          },
+          {
+           "workerIndex": 8,
+           "status": "failed",
+           "duration": 4,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:51.578Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "42c2b1cbea06b5c999f1-c21a3e95edb790deaac9",
+       "file": "pages/home.spec.ts",
+       "line": 12,
+       "column": 7
+      },
+      {
+       "title": "nav bar components are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 9,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:52.222Z"
+          },
+          {
+           "workerIndex": 10,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:52.862Z"
+          },
+          {
+           "workerIndex": 11,
+           "status": "failed",
+           "duration": 4,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:53.529Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "42c2b1cbea06b5c999f1-6e03c3fb9c36fc4bcd18",
+       "file": "pages/home.spec.ts",
+       "line": 24,
+       "column": 7
+      },
+      {
+       "title": "footer components are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 12,
+           "status": "failed",
+           "duration": 4,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:54.172Z"
+          },
+          {
+           "workerIndex": 13,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:54.824Z"
+          },
+          {
+           "workerIndex": 14,
+           "status": "failed",
+           "duration": 4,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:55.468Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "42c2b1cbea06b5c999f1-d700005311282158bfd5",
+       "file": "pages/home.spec.ts",
+       "line": 33,
+       "column": 7
+      },
+      {
+       "title": "has no broken links",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 15,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:56.148Z"
+          },
+          {
+           "workerIndex": 16,
+           "status": "failed",
+           "duration": 4,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:56.803Z"
+          },
+          {
+           "workerIndex": 17,
+           "status": "failed",
+           "duration": 5,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:57.473Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "42c2b1cbea06b5c999f1-014aae84f9934b2ca460",
+       "file": "pages/home.spec.ts",
+       "line": 40,
+       "column": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "pages\\search.spec.ts",
+   "file": "pages/search.spec.ts",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "search page",
+     "file": "pages/search.spec.ts",
+     "line": 3,
+     "column": 6,
+     "specs": [
+      {
+       "title": "title is correct",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 18,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:19:58.154Z"
+          },
+          {
+           "workerIndex": 19,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:19:58.969Z"
+          },
+          {
+           "workerIndex": 20,
+           "status": "failed",
+           "duration": 4,
+           "retry": 2,
+           "startTime": "2026-09-23T09:19:59.587Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bfefe3f4c5d1311e2979-7b0490f278c6bd497757",
+       "file": "pages/search.spec.ts",
+       "line": 8,
+       "column": 7
+      },
+      {
+       "title": "product cards are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 21,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:00.216Z"
+          },
+          {
+           "workerIndex": 22,
+           "status": "failed",
+           "duration": 4,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:00.814Z"
+          },
+          {
+           "workerIndex": 23,
+           "status": "failed",
+           "duration": 6,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:01.480Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bfefe3f4c5d1311e2979-72fbc9a179da1fa9ad8e",
+       "file": "pages/search.spec.ts",
+       "line": 12,
+       "column": 7
+      },
+      {
+       "title": "nav bar components are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 24,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:02.138Z"
+          },
+          {
+           "workerIndex": 25,
+           "status": "failed",
+           "duration": 4,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:02.809Z"
+          },
+          {
+           "workerIndex": 26,
+           "status": "failed",
+           "duration": 5,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:03.454Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bfefe3f4c5d1311e2979-140c024ddf3b3d7dcabd",
+       "file": "pages/search.spec.ts",
+       "line": 19,
+       "column": 7
+      },
+      {
+       "title": "footer components are visible",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 27,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:04.114Z"
+          },
+          {
+           "workerIndex": 28,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:04.754Z"
+          },
+          {
+           "workerIndex": 29,
+           "status": "failed",
+           "duration": 7,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:05.404Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bfefe3f4c5d1311e2979-dc434ca990e221c8c76b",
+       "file": "pages/search.spec.ts",
+       "line": 28,
+       "column": 7
+      },
+      {
+       "title": "has no broken links",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 30,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:06.187Z"
+          },
+          {
+           "workerIndex": 31,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:06.802Z"
+          },
+          {
+           "workerIndex": 32,
+           "status": "failed",
+           "duration": 5,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:07.451Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "bfefe3f4c5d1311e2979-3336a8e4090adcdad373",
+       "file": "pages/search.spec.ts",
+       "line": 35,
+       "column": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "visual\\visual.spec.ts",
+   "file": "visual/visual.spec.ts",
+   "column": 0,
+   "line": 0,
+   "specs": [],
+   "suites": [
+    {
+     "title": "home page visual-test",
+     "file": "visual/visual.spec.ts",
+     "line": 5,
+     "column": 6,
+     "specs": [
+      {
+       "title": "snapshot",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 33,
+           "status": "failed",
+           "duration": 4,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:08.181Z"
+          },
+          {
+           "workerIndex": 34,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:08.815Z"
+          },
+          {
+           "workerIndex": 35,
+           "status": "failed",
+           "duration": 5,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:09.459Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "f9e204bdf24c0fac9990-fd4aa1b094f85a0cdc34",
+       "file": "visual/visual.spec.ts",
+       "line": 10,
+       "column": 7
+      }
+     ]
+    },
+    {
+     "title": "search page visual-test",
+     "file": "visual/visual.spec.ts",
+     "line": 18,
+     "column": 6,
+     "specs": [
+      {
+       "title": "snapshot",
+       "ok": false,
+       "tags": [],
+       "tests": [
+        {
+         "timeout": 60000,
+         "expectedStatus": "passed",
+         "projectId": "chromium",
+         "projectName": "chromium",
+         "results": [
+          {
+           "workerIndex": 36,
+           "status": "failed",
+           "duration": 5,
+           "retry": 0,
+           "startTime": "2026-09-23T09:20:10.099Z"
+          },
+          {
+           "workerIndex": 37,
+           "status": "failed",
+           "duration": 5,
+           "retry": 1,
+           "startTime": "2026-09-23T09:20:10.746Z"
+          },
+          {
+           "workerIndex": 38,
+           "status": "failed",
+           "duration": 8,
+           "retry": 2,
+           "startTime": "2026-09-23T09:20:11.396Z"
+          }
+         ],
+         "status": "unexpected"
+        }
+       ],
+       "id": "f9e204bdf24c0fac9990-4a37b36a7cfa47ae9827",
+       "file": "visual/visual.spec.ts",
+       "line": 23,
+       "column": 7
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "startTime": "2026-09-23T09:19:44.828Z",
+  "duration": 26623.923,
+  "expected": 0,
+  "skipped": 2,
+  "unexpected": 13,
+  "flaky": 0
+ }
+}

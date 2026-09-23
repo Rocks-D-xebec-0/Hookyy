@@ -1,0 +1,68 @@
+{
+  "name": "hookyy",
+  "version": "0.1.0",
+  "description": "Audit test hooks from your test reports: orphaned, unused, slow and tag-mismatched hooks. Zero changes to test code.",
+  "license": "MIT",
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "cypress",
+    "hooks",
+    "testing",
+    "audit",
+    "ci",
+    "lint"
+  ],
+  "bin": {
+    "hookyy": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json",
+    "./playwright-reporter": {
+      "types": "./dist/playwright-reporter.d.ts",
+      "require": "./dist/playwright-reporter.js",
+      "import": "./dist/playwright-reporter.js"
+    }
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "js-yaml": "^4.1.0",
+    "picocolors": "^1.1.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^20.14.0",
+    "@types/yargs": "^17.0.33",
+    "jsdom": "^25.0.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

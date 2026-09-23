@@ -1,0 +1,338 @@
+[
+ {
+  "description": "",
+  "elements": [
+   {
+    "description": "",
+    "id": "playwright-docs;change-theme",
+    "keyword": "Scenario",
+    "line": 7,
+    "name": "Change theme",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 1099347699
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 5,
+      "name": "Go to the playwright website",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:6"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 677369700
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 8,
+      "name": "Use Fake time \"2021-01-01\"",
+      "match": {
+       "location": "src\\steps\\general.steps.ts:27"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 31007900
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 9,
+      "name": "A cat fact is recieved",
+      "match": {
+       "location": "src\\steps\\api.steps.ts:5"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 389692900
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 10,
+      "name": "Change theme to \"light\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 621502700
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 12,
+      "name": "We see \"light\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:53"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 18751800
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 13,
+      "name": "Change theme to \"dark\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 616797099
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 32104299
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@foo",
+      "line": 1
+     }
+    ],
+    "type": "scenario"
+   }
+  ],
+  "id": "playwright-docs",
+  "line": 2,
+  "keyword": "Feature",
+  "name": "Playwright docs",
+  "tags": [
+   {
+    "name": "@foo",
+    "line": 1
+   }
+  ],
+  "uri": "features\\playwright.feature"
+ },
+ {
+  "description": "",
+  "elements": [
+   {
+    "description": "",
+    "id": "playwright-multi-docs;changing-theme-to-required-mode",
+    "keyword": "Scenario Outline",
+    "line": 16,
+    "name": "Changing theme to required mode",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 102696200
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 6,
+      "name": "Go to the playwright website",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:6"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 738283300
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 9,
+      "name": "Change theme to \"light\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 679795099
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 10,
+      "name": "Snapshot \"light\"",
+      "match": {
+       "location": "src\\steps\\general.steps.ts:5"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 316621600
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 11,
+      "name": "Change theme to \"dark\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 634009999
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 12,
+      "name": "Snapshot \"dark\"",
+      "match": {
+       "location": "src\\steps\\general.steps.ts:5"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 274028800
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 24130699
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@foo",
+      "line": 1
+     }
+    ],
+    "type": "scenario"
+   },
+   {
+    "description": "",
+    "id": "playwright-multi-docs;changing-theme-to-required-mode",
+    "keyword": "Scenario Outline",
+    "line": 17,
+    "name": "Changing theme to required mode",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 94638499
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 6,
+      "name": "Go to the playwright website",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:6"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 600885400
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 9,
+      "name": "Change theme to \"dark\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 1207285699
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 10,
+      "name": "Snapshot \"dark\"",
+      "match": {
+       "location": "src\\steps\\general.steps.ts:5"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 156467999
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 11,
+      "name": "Change theme to \"light\" mode",
+      "match": {
+       "location": "src\\steps\\playwright.steps.ts:13"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 1180564300
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 12,
+      "name": "Snapshot \"light\"",
+      "match": {
+       "location": "src\\steps\\general.steps.ts:5"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 162730500
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 22612000
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@foo",
+      "line": 1
+     }
+    ],
+    "type": "scenario"
+   }
+  ],
+  "id": "playwright-multi-docs",
+  "line": 2,
+  "keyword": "Feature",
+  "name": "Playwright multi docs",
+  "tags": [
+   {
+    "name": "@foo",
+    "line": 1
+   }
+  ],
+  "uri": "features\\playwright.outline.feature"
+ }
+]

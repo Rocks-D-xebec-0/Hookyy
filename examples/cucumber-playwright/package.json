@@ -1,0 +1,14 @@
+{
+  "name": "hookyy-example-cucumber-playwright",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js",
+    "audit:hooks": "hookyy analyze reports/hookyy.ndjson --verbose",
+    "test:ci": "cucumber-js; hookyy analyze reports/hookyy.ndjson --fail-on error"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "@playwright/test": "^1.47.0",
+    "hookyy": "file:../.."
+  }
+}

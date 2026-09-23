@@ -1,0 +1,7 @@
+{
+  "messages": {
+    "enabled": true,
+    "output": "reports/hookyy.ndjson"
+  },
+  "stepDefinitions": "cypress/e2e/**/*.js"
+}

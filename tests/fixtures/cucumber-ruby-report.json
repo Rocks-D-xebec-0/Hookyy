@@ -1,0 +1,120 @@
+[
+  {
+    "uri": "features/login.feature",
+    "name": "Login",
+    "tags": [],
+    "elements": [
+      {
+        "name": "",
+        "keyword": "Background",
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the app is open",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      },
+      {
+        "name": "Valid login",
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@auth"
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I log in",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "name": "Locked account",
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@ignore"
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I log in",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "pending",
+              "duration": 0
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

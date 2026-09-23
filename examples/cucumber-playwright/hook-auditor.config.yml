@@ -1,0 +1,14 @@
+rules:
+  slow:
+    threshold: 500   # ms
+  tagMismatch:
+    severity: error
+
+# Declare the scope each hook is *meant* to have. Hookyy flags any run outside it.
+hookTags:
+  "steps/hooks.js:18": "@db"
+
+reporters:
+  - type: cli
+  - type: html
+    output: reports/hooks.html

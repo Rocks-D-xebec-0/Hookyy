@@ -1,0 +1,7 @@
+# The Before hook in search.js has no tag filter, but it's only meant for @api.
+# Declaring the intended scope lets Hookyy flag TAG_MISMATCH.
+hookTags:
+  "search.js": "@api"
+rules:
+  slow:
+    threshold: 2000

@@ -1,0 +1,111 @@
+{
+  "hookyyReport": 1,
+  "framework": "playwright",
+  "generator": "hookyy/playwright-reporter (synthetic test fixture)",
+  "scenarios": [
+    {
+      "name": "tests/checkout.spec.ts › pays with card @smoke",
+      "id": "t1",
+      "tags": [
+        "@smoke"
+      ],
+      "passed": true,
+      "skipped": false,
+      "duration": 3000,
+      "hooks": [
+        {
+          "hookName": "beforeEach hook (tests/checkout.spec.ts:4)",
+          "type": "before",
+          "location": "tests/checkout.spec.ts:4",
+          "scenarioName": "tests/checkout.spec.ts › pays with card @smoke",
+          "scenarioTags": [
+            "@smoke"
+          ],
+          "duration": 1800,
+          "passed": true,
+          "skipped": false,
+          "scenarioSkipped": false
+        },
+        {
+          "hookName": "afterEach hook (tests/checkout.spec.ts:9)",
+          "type": "after",
+          "location": "tests/checkout.spec.ts:9",
+          "scenarioName": "tests/checkout.spec.ts › pays with card @smoke",
+          "scenarioTags": [
+            "@smoke"
+          ],
+          "duration": 20,
+          "passed": true,
+          "skipped": false,
+          "scenarioSkipped": false
+        }
+      ]
+    },
+    {
+      "name": "tests/checkout.spec.ts › legacy flow",
+      "id": "t2",
+      "tags": [],
+      "passed": false,
+      "skipped": true,
+      "duration": 1300,
+      "hooks": [
+        {
+          "hookName": "beforeEach hook (tests/checkout.spec.ts:4)",
+          "type": "before",
+          "location": "tests/checkout.spec.ts:4",
+          "scenarioName": "tests/checkout.spec.ts › legacy flow",
+          "scenarioTags": [],
+          "duration": 1200,
+          "passed": true,
+          "skipped": false,
+          "scenarioSkipped": true
+        },
+        {
+          "hookName": "afterEach hook (tests/checkout.spec.ts:9)",
+          "type": "after",
+          "location": "tests/checkout.spec.ts:9",
+          "scenarioName": "tests/checkout.spec.ts › legacy flow",
+          "scenarioTags": [],
+          "duration": 21,
+          "passed": true,
+          "skipped": false,
+          "scenarioSkipped": true
+        }
+      ]
+    },
+    {
+      "name": "tests/admin.spec.ts › Admin › lists users",
+      "id": "t3",
+      "tags": [
+        "@admin"
+      ],
+      "passed": false,
+      "skipped": true,
+      "duration": 80,
+      "hooks": [
+        {
+          "hookName": "seed admin data (tests/admin.spec.ts:5)",
+          "type": "before",
+          "location": "tests/admin.spec.ts:5",
+          "scenarioName": "tests/admin.spec.ts › Admin › lists users",
+          "scenarioTags": [
+            "@admin"
+          ],
+          "duration": 50,
+          "passed": true,
+          "skipped": false,
+          "scenarioSkipped": true
+        }
+      ]
+    },
+    {
+      "name": "tests/admin.spec.ts › Admin › never runs",
+      "id": "t4",
+      "tags": [],
+      "passed": false,
+      "skipped": true,
+      "duration": 0,
+      "hooks": []
+    }
+  ]
+}

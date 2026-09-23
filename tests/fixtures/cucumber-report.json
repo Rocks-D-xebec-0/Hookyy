@@ -1,0 +1,238 @@
+[
+  {
+    "uri": "features/checkout.feature",
+    "name": "Checkout",
+    "keyword": "Feature",
+    "tags": [
+      {
+        "name": "@checkout"
+      }
+    ],
+    "elements": [
+      {
+        "id": "checkout;pay-with-card",
+        "name": "Pay with card",
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@checkout"
+          },
+          {
+            "name": "@db"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200000000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "a cart",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I pay by card",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "checkout;pay-with-voucher",
+        "name": "Pay with voucher",
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@checkout"
+          },
+          {
+            "name": "@wip"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100000000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "a cart",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I pay by voucher",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "checkout;guest-checkout",
+        "name": "Guest checkout",
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@checkout"
+          },
+          {
+            "name": "@smoke"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 900000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:40"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "a guest cart",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I check out",
+            "match": {
+              "location": "features/steps/checkout.steps.js:1"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/hooks.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

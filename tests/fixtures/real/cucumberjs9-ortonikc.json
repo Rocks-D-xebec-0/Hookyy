@@ -1,0 +1,688 @@
+[
+ {
+  "description": "",
+  "elements": [
+   {
+    "description": "",
+    "id": "add-products-to-cart;authenticated-users---add-to-cart",
+    "keyword": "Scenario Outline",
+    "line": 18,
+    "name": "Authenticated Users - Add to cart",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 296659000
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 4,
+      "name": "User navigates to the application",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:43"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 4724571900
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 5,
+      "name": "User click on the login link",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:56"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30025311899,
+       "error_message": "locator.click: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 9,
+      "name": "User enter the username as \"ortoni\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:68"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 10,
+      "name": "User enter the password as \"pass1234$\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:80"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 11,
+      "name": "User click on the login button",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:92"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 12,
+      "name": "user search for a \"Roomies\"",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:43"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 13,
+      "name": "user add the book to the cart",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:63"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 14,
+      "name": "the cart badge should get updated",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:83"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 3116157099
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@add",
+      "line": 7
+     }
+    ],
+    "type": "scenario"
+   },
+   {
+    "description": "",
+    "id": "add-products-to-cart;authenticated-users---add-to-cart",
+    "keyword": "Scenario Outline",
+    "line": 19,
+    "name": "Authenticated Users - Add to cart",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 168756399
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 4,
+      "name": "User navigates to the application",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:43"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 3156416499
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 5,
+      "name": "User click on the login link",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:56"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30018573100,
+       "error_message": "locator.click: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 9,
+      "name": "User enter the username as \"ortonikc\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:68"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 10,
+      "name": "User enter the password as \"pass1234\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:80"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 11,
+      "name": "User click on the login button",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:92"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 12,
+      "name": "user search for a \"The Simple Wild\"",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:43"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 13,
+      "name": "user add the book to the cart",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:63"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 14,
+      "name": "the cart badge should get updated",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:83"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 3245777699
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@add",
+      "line": 7
+     }
+    ],
+    "type": "scenario"
+   },
+   {
+    "description": "",
+    "id": "add-products-to-cart;unauthenticated-user---add-to-cart",
+    "keyword": "Scenario",
+    "line": 22,
+    "name": "UnAuthenticated User - Add to cart",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 247970700
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 4,
+      "name": "User navigates to the application",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:43"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 3369056400
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 5,
+      "name": "User click on the login link",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:56"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30026165900,
+       "error_message": "locator.click: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 23,
+      "name": "user search for a \"All of Us with Wings\"",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:43"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 24,
+      "name": "user add the book to the cart",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:63"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 25,
+      "name": "the cart badge should get updated",
+      "match": {
+       "location": "src\\test\\steps\\addToCartSteps.ts:83"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 2999618600
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@fail",
+      "line": 21
+     }
+    ],
+    "type": "scenario"
+   }
+  ],
+  "id": "add-products-to-cart",
+  "line": 1,
+  "keyword": "Feature",
+  "name": "Add products to cart",
+  "tags": [],
+  "uri": "src\\test\\features\\addToCart.feature"
+ },
+ {
+  "description": "",
+  "elements": [
+   {
+    "description": "",
+    "id": "user-authentication-tests;login-should-be-success",
+    "keyword": "Scenario",
+    "line": 7,
+    "name": "Login should be success",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 180637700
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 4,
+      "name": "User navigates to the application",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:43"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 3255815299
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 5,
+      "name": "User click on the login link",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:56"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30022519300,
+       "error_message": "locator.click: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 8,
+      "name": "User enter the username as \"ortoni11\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:68"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 9,
+      "name": "User enter the password as \"Pass1234\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:80"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 10,
+      "name": "User click on the login button",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:92"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 11,
+      "name": "Login should be success",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:111"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 3024011200
+      }
+     }
+    ],
+    "tags": [],
+    "type": "scenario"
+   },
+   {
+    "description": "",
+    "id": "user-authentication-tests;login-should-not-be-success",
+    "keyword": "Scenario",
+    "line": 13,
+    "name": "Login should not be success",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 257814500
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 4,
+      "name": "User navigates to the application",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:43"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 2805719299
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "And ",
+      "line": 5,
+      "name": "User click on the login link",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:56"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30023842400,
+       "error_message": "locator.click: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 14,
+      "name": "User enter the username as \"koushik\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:68"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 15,
+      "name": "User enter the password as \"Passkoushik\"",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:80"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 16,
+      "name": "User click on the login button",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:92"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "But ",
+      "line": 17,
+      "name": "Login should fail",
+      "match": {
+       "location": "src\\test\\steps\\loginSteps.ts:131"
+      },
+      "result": {
+       "status": "skipped",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 3616401199
+      }
+     }
+    ],
+    "tags": [],
+    "type": "scenario"
+   }
+  ],
+  "id": "user-authentication-tests",
+  "line": 1,
+  "keyword": "Feature",
+  "name": "User Authentication tests",
+  "tags": [],
+  "uri": "src\\test\\features\\login.feature"
+ },
+ {
+  "description": "",
+  "elements": [
+   {
+    "description": "",
+    "id": "register-user;register-new-user",
+    "keyword": "Scenario",
+    "line": 4,
+    "name": "Register new User",
+    "steps": [
+     {
+      "keyword": "Before",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 312682299
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Given ",
+      "line": 5,
+      "name": "I navigate to the register page",
+      "match": {
+       "location": "src\\test\\steps\\registerUsersSteps.ts:46"
+      },
+      "result": {
+       "status": "passed",
+       "duration": 3205536499
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "When ",
+      "line": 6,
+      "name": "I created a new user",
+      "match": {
+       "location": "src\\test\\steps\\registerUsersSteps.ts:61"
+      },
+      "result": {
+       "status": "failed",
+       "duration": 30023822400,
+       "error_message": "page.type: Timeout 30000ms exceeded."
+      }
+     },
+     {
+      "arguments": [],
+      "keyword": "Then ",
+      "line": 7,
+      "name": "I conform user registeration is success",
+      "result": {
+       "status": "undefined",
+       "duration": 0
+      }
+     },
+     {
+      "keyword": "After",
+      "hidden": true,
+      "result": {
+       "status": "passed",
+       "duration": 3487569900
+      }
+     }
+    ],
+    "tags": [
+     {
+      "name": "@test",
+      "line": 3
+     }
+    ],
+    "type": "scenario"
+   }
+  ],
+  "id": "register-user",
+  "line": 1,
+  "keyword": "Feature",
+  "name": "Register User",
+  "tags": [],
+  "uri": "src\\test\\features\\registerFeature.feature"
+ }
+]
