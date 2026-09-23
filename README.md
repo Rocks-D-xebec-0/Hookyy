@@ -251,6 +251,19 @@ npm run build     # tsup: dist/index.js (CJS), dist/index.mjs (ESM), dist/cli.js
 node dist/cli.js analyze tests/fixtures/real/cucumberjs12-tallyb.ndjson -v
 ```
 
+## Status
+
+v0.1.1. Early release: the CLI, the report formats it reads and the `hookyy/playwright-reporter` output are
+versioned (`hookyyReport: 1`) but may still change before 1.0. See [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
-MIT
+[MIT](LICENSE). Copyright 2026 Mosbah Houcem Eddine.
+
+## Author
+
+**Mosbah Houcem Eddine**
+
+- GitHub: [@Rocks-D-xebec-0](https://github.com/Rocks-D-xebec-0)
+- Repository: [Rocks-D-xebec-0/Hookyy](https://github.com/Rocks-D-xebec-0/Hookyy)
+- npm: [hookyy](https://www.npmjs.com/package/hookyy)

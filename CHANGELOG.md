@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.1
+
+- Package metadata: author (Mosbah Houcem Eddine), copyright holder in LICENSE.
+- README: Status, License and Author sections.
+
+## 0.1.0
 
 First release. Field-tested on 41 public e2e projects before release (see `docs/field-test.md`).
 

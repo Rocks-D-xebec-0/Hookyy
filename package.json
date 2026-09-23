@@ -1,8 +1,12 @@
 {
   "name": "hookyy",
-  "version": "0.1.0",
-  "description": "Audit test hooks from your test reports: orphaned, unused, slow and tag-mismatched hooks. Zero changes to test code.",
+  "version": "0.1.1",
+  "description": "See how much of your test run is spent in hooks and what to change: slow, costly, failing and unused Cucumber, Playwright, Cypress and WebdriverIO hooks. No test code changes.",
   "license": "MIT",
+  "author": {
+    "name": "Mosbah Houcem Eddine",
+    "url": "https://github.com/Rocks-D-xebec-0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rocks-D-xebec-0/Hookyy.git"
@@ -15,11 +19,14 @@
     "cucumber",
     "playwright",
     "cypress",
+    "webdriverio",
+    "cucumber-jvm",
     "hooks",
-    "testing",
-    "audit",
+    "beforeEach",
+    "test-performance",
+    "e2e",
     "ci",
-    "lint"
+    "audit"
   ],
   "bin": {
     "hookyy": "dist/cli.js"
