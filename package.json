@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "Audit test hooks from your test reports: orphaned, unused, slow and tag-mismatched hooks. Zero changes to test code.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rocks-D-xebec-0/Hookyy.git"
+  },
+  "homepage": "https://github.com/Rocks-D-xebec-0/Hookyy#readme",
+  "bugs": {
+    "url": "https://github.com/Rocks-D-xebec-0/Hookyy/issues"
+  },
   "keywords": [
     "cucumber",
     "playwright",
