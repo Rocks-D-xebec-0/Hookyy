@@ -43,4 +43,6 @@ jobs:
       - run: node dist/cli.js --version
       - run: node dist/cli.js analyze tests/fixtures/real/cucumberjs12-tallyb.ndjson --no-color
       - run: node dist/cli.js analyze "tests/fixtures/real/*.ndjson" -f json > /dev/null
-      - run: node -e "const R=require('./dist/playwright-reporter.js'); new R(); require('./dist/index.js').analyze({ reportPath: 'tests/fixtures/playwright-hookyy.json', config: {} })"
+      - name: Reporter and API load on Node 14
+        run: |
+          node -e "const R = require('./dist/playwright-reporter.js'); new R(); require('./dist/index.js').analyze({ reportPath: 'tests/fixtures/playwright-hookyy.json', config: {} }); console.log('ok')"
